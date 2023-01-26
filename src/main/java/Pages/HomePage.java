@@ -24,6 +24,16 @@ public class HomePage {
         driver.findElement(DropDown).click();
         return  new DropDownPage(driver);
     }
+    public DragNDropPage DragMe(){
+        return  new DragNDropPage(driver);
+    }
+    public Alerts Alert1(){
+        return  new Alerts(driver);
+    }
+    public DropDownPage DoubleClick(){
+        //driver.findElement(DropDown).click();
+        return  new DropDownPage(driver);
+    }
     public ForgetPassPage ClickForgetPass(){
         driver.findElement(ForgetPass).click();
         return  new ForgetPassPage(driver);

@@ -19,7 +19,8 @@ public class BaseTests {
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/");
+      //  driver.get("https://the-internet.herokuapp.com/");
+    driver.get("http://cookbook.seleniumacademy.com/");
        // driver.manage().window().fullscreen();
         homePage=new HomePage(driver);
 
