@@ -34,6 +34,22 @@ public class HomePage {
         //driver.findElement(DropDown).click();
         return  new DropDownPage(driver);
     }
+    public Scroll ScrollPage(){
+        //driver.findElement(DropDown).click();
+        return  new Scroll(driver);
+    }
+    public ScreenShotPage ss(){
+        //driver.findElement(DropDown).click();
+        return  new ScreenShotPage(driver);
+    }
+    public BrokenImgPage brokenImgPage(){
+        //driver.findElement(DropDown).click();
+        return  new BrokenImgPage(driver);
+    }
+    public DownloadFilePage downloadFilePage(){
+        //driver.findElement(DropDown).click();
+        return  new DownloadFilePage(driver);
+    }
     public ForgetPassPage ClickForgetPass(){
         driver.findElement(ForgetPass).click();
         return  new ForgetPassPage(driver);

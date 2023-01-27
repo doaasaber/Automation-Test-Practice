@@ -1,7 +1,6 @@
 package PagesTests;
 
-import Pages.Alerts;
-import Pages.DragNDropPage;
+import Pages.*;
 import base.BaseTests;
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;
@@ -41,5 +40,30 @@ public class OtherTest extends BaseTests {
         String name="Doaa";
         String text=  alerts.promptAlert(name);
         assertEquals(text,"Hello Doaa! How are you today?");
+    }
+
+    @Test
+    public void ScrollTest() throws InterruptedException {
+        Scroll scroll=homePage.ScrollPage();
+       scroll.ScrollPage();
+    }
+
+    @Test
+    public void ScreenShotTests() throws InterruptedException {
+        ScreenShotPage screenShotPage=homePage.ss();
+        screenShotPage.Search();
+    }
+
+
+    @Test
+    public void Download()  {
+        DownloadFilePage downloadFilePage=homePage.downloadFilePage();
+        downloadFilePage.DownloadFile();
+    }
+    @Test
+    public void BrokenImageTest(){
+        BrokenImgPage brokenImgPage=homePage.brokenImgPage();
+        int count=brokenImgPage.ImageBroken();
+        assertEquals(count,2);
     }
 }
